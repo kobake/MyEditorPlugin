@@ -1,0 +1,4 @@
+MyEditorPlugin
+==============
+
+Eclipse pluging jikken
