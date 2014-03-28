@@ -17,6 +17,16 @@ public class XMLConfiguration extends SourceViewerConfiguration {
 	private XMLTagScanner tagScanner;
 	private XMLScanner scanner;
 	private ColorManager colorManager;
+	
+	public void updatePreferences() {
+		// デフォルトの色の設定
+		tagScanner.initialize();	//←initialize()は今回新設したメソッド
+		scanner.initialize();
+
+		// コメントの色の設定
+		//TextAttribute attr = new TextAttribute(colorManager.getCommentColor());
+		//commentDamagerPepairer.setDefaultTextAttribute(attr);	//←setDefaultTextAttribute()は今回新設したメソッド
+	}	
 
 	public XMLConfiguration(ColorManager colorManager) {
 		this.colorManager = colorManager;

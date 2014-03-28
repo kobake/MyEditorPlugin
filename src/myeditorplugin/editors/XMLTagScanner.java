@@ -5,10 +5,16 @@ import org.eclipse.jface.text.rules.*;
 
 public class XMLTagScanner extends RuleBasedScanner {
 
+	ColorManager m_manager;
 	public XMLTagScanner(ColorManager manager) {
+		m_manager = manager;
+		initialize();
+	}
+	
+	void initialize(){
 		IToken string =
-			new Token(
-				new TextAttribute(manager.getColor(IXMLColorConstants.STRING)));
+				new Token(
+					new TextAttribute(m_manager.getColor(IXMLColorConstants.STRING)));
 
 		IRule[] rules = new IRule[4];
 
