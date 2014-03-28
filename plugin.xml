@@ -14,4 +14,18 @@
       </editor>
    </extension>
 
+	<!-- 設定 -->
+	<extension point="org.eclipse.core.runtime.preferences">
+		<initializer class="myeditorplugin.editors.XMLEditorPreferenceInitializer"/>
+	</extension>
+	
+	<!-- 設定 -->
+	<extension point="org.eclipse.ui.preferencePages">
+		<page
+			class="myeditorplugin.editors.XMLEditorPreferencePage"
+			id="myeditorplugin.page"
+			name="Sample XML Editor" />
+	</extension>
+	
+	
 </plugin>
