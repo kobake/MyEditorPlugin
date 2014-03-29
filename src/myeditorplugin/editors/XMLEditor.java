@@ -29,8 +29,9 @@ public class XMLEditor extends TextEditor
 	@Override
 	public void propertyChange(PropertyChangeEvent event) {
 		// 設定が変更された
-		XMLConfiguration config = (XMLConfiguration)getSourceViewerConfiguration();
-		config.updatePreferences();
+		((XMLConfiguration)getSourceViewerConfiguration()).updatePreferences();
+		// XMLConfiguration config = (XMLConfiguration)getSourceViewerConfiguration();
+		// config.updatePreferences();
 		
 		// テキストエディタ再描画
 		getSourceViewer().invalidateTextPresentation();
